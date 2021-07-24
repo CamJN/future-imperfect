@@ -1,0 +1,39 @@
+{
+    "name": "future-imperfect",
+    "version": "1.0.0",
+    "description": "A blog-style template, Future Imperfect features a clean, expansive layout, a toggleable search box, and a whole lot of flexbox action, ported to the ghost template system",
+    "main": "assets/js/main.js",
+    "engines": {
+        "ghost-api": "v3"
+    },
+    "scripts": {
+        "start": "(trap 'kill 0' SIGINT; sass --watch assets/sass/main.scss:assets/css/main.css assets/sass/fontawesome.scss:assets/css/fontawesome.css & /usr/bin/python -m SimpleHTTPServer)",
+        "build": "npm run css1 && npm run css2 && npm run html",
+        "css1": "sass assets/sass/main.scss assets/css/main.css",
+        "css2": "sass assets/sass/fontawesome.scss assets/css/fontawesome.css",
+        "html": "for file in *-body.html; do awk -v body_file=$file -f build.awk template.html > ${file%-body.html}.html ; done",
+        "test": "gscan ."
+    },
+    "repository": {
+        "type": "git",
+        "url": "./"
+    },
+    "keywords": [
+        "ghost",
+        "template",
+        "blog"
+    ],
+    "author": {
+        "name": "Camden Narzt & @ajlkn",
+        "email": "ghost@narzt.cam"
+    },
+    "config": {
+        "posts_per_page": 10,
+        "image_sizes": {}
+    },
+    "license": "CC-BY 3.0",
+    "dependencies": {
+        "gscan": "^4.2.1",
+        "sass": "^1.35.2"
+    }
+}

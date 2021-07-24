@@ -1,14 +1,14 @@
 <section id="footer">
   <ul class="icons">
-    <li><a href="{{@site.url}}/rss/" class="icon solid fa-rss"><span class="label">RSS</span></a></li>
+    <li><a href="{{@site.url}}/rss/" class="icon solid fas fa-rss"><span class="label">RSS</span></a></li>
     {{#if @site.twitter}}
-    <li><a href="{{twitter_url @site.twitter}}" class="icon brands fa-twitter" target="_blank" rel="noopener"><span class="label">Twitter</span></a></li>
+    <li><a href="{{twitter_url @site.twitter}}" class="icon brands fab fa-twitter" target="_blank" rel="noopener"><span class="label">Twitter</span></a></li>
     {{/if}}
     {{#if @site.facebook}}
-    <li><a href="{{facebook_url @site.facebook}}" class="icon brands fa-facebook-f" target="_blank" rel="noopener"><span class="label">Facebook</span></a></li>
+    <li><a href="{{facebook_url @site.facebook}}" class="icon brands fab fa-facebook-f" target="_blank" rel="noopener"><span class="label">Facebook</span></a></li>
     {{/if}}
-    <li><a href="#" class="icon brands fa-instagram" target="_blank" rel="noopener"><span class="label">Instagram</span></a></li>
-    <li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+    <li><a href="#" class="icon brands fab fa-instagram" target="_blank" rel="noopener"><span class="label">Instagram</span></a></li>
+    <li><a href="#" class="icon solid fas fa-envelope"><span class="label">Email</span></a></li>
   </ul>
   <p class="copyright">&copy; {{date format="YYYY"}} {{@site.title}}. Design: <a href="http://html5up.net">HTML5 UP</a>.</p>
 </section>

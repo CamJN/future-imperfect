@@ -2866,6 +2866,7 @@ body {
   position: relative;
   text-indent: 4em;
   width: 4em;
+  line-height: inherit;
 }
 #header .main ul li > a:before {
   -moz-osx-font-smoothing: grayscale;

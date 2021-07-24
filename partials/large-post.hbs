@@ -2,7 +2,7 @@
 <article class="post {{post_class}}">
     <header>
         <div class="title">
-            <h2><a href="#">{{title}}</a></h2>
+            <h2><a href="{{url}}">{{title}}</a></h2>
             {{#if meta_description}}
                 <p>{{meta_description}}</p>
             {{/if}}
@@ -56,7 +56,9 @@
             </ul>
         {{/is}}
         <ul class="stats">
-            <li><a href="#">General</a></li>
+            {{#if primary_tag}}
+                <li><a href="{{primary_tag.url}}">{{primary_tag.name}}</a></li>
+            {{/if}}
             <li><a href="#" class="icon solid fa-heart">28</a></li>
             <li><a href="#" class="icon solid fa-comment">128</a></li>
         </ul>

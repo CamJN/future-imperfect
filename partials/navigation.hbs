@@ -1,0 +1,22 @@
+{{#if isSecondary}}
+    <ul class="links">
+        {{#foreach navigation}}
+            <li class="nav-{{slug}}" role="menuitem">
+                <a href="{{url}}">
+                    <h3>{{label}}</h3>
+                    {{#get "posts" slug="{{slug}}" as |post|}}
+                        {{#post}}
+                            <p>{{exerpt words="4"}}</p>
+                        {{/post}}
+                    {{/get}}
+                </a>
+            </li>
+        {{/foreach}}
+    </ul>
+{{else}}
+    <ul class="nav" role="menu">
+        {{#foreach navigation}}
+            <li><a href="{{url absolute="true"}}">{{label}}</a></li>
+        {{/foreach}}
+    </ul>
+{{/if}}

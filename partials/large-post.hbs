@@ -1,0 +1,64 @@
+<!-- Post -->
+<article class="post {{post_class}}">
+    <header>
+        <div class="title">
+            <h2><a href="#">{{title}}</a></h2>
+            {{#if meta_description}}
+                <p>{{meta_description}}</p>
+            {{/if}}
+        </div>
+        <div class="meta">
+            <time class="published" datetime="{{date format="YYYY-MM-DD"}}">{{date}}</time>
+            {{#primary_author}}
+                {{#if profile_image}}
+                    <a href="{{url}}" class="author">
+                        <span class="name">{{name}}</span>
+                        <img src="{{img_url profile_image size="xs"}}" alt="{{name}}" />
+                    </a>
+                {{else}}
+                    <a href="{{url}}" class="author">{{name}}</a>
+                {{/if}}
+            {{/primary_author}}
+        </div>
+    </header>
+    {{#if feature_image}}
+        {{#is "index"}}
+            <a href="{{url}}" class="image featured">
+    {{else}}
+                <span class="image featured">
+        {{/is}}
+
+        <img srcset="{{img_url feature_image size="s"}} 300w,
+                     {{img_url feature_image size="m"}} 600w,
+                     {{img_url feature_image size="l"}} 1000w,
+                     {{img_url feature_image size="xl"}} 2000w"
+             sizes="(min-width: 1400px) 1400px, 92vw"
+             src="{{img_url feature_image size="xl"}}"
+             alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}"
+        />
+        {{#is "index"}}
+            </a>
+    {{else}}
+                </span>
+        {{/is}}
+    {{/if}}
+
+    {{#is "index"}}
+        <p>{{exerpt}}</p>
+    {{else}}
+        {{content}}
+    {{/is}}
+
+    <footer>
+        {{#is "index"}}
+            <ul class="actions">
+                <li><a href="{{url}}" class="button large">Continue Reading</a></li>
+            </ul>
+        {{/is}}
+        <ul class="stats">
+            <li><a href="#">General</a></li>
+            <li><a href="#" class="icon solid fa-heart">28</a></li>
+            <li><a href="#" class="icon solid fa-comment">128</a></li>
+        </ul>
+    </footer>
+</article>

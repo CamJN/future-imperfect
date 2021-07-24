@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html lang="{{@site.locale}}">
+  <head>
+    <title>{{meta_title}}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="{{asset "built/main.css"}}" />
+    {{ghost_head}}
+  </head>
+  <body class="is-preload {{body_class}}">
+
+    <!-- Wrapper -->
+    <div id="wrapper">
+
+      <!-- Header -->
+      {{> header}}
+
+      <!-- Menu -->
+      {{> menu}}
+
+      <!-- Main -->
+      <div id="main">
+        {{{body}}}
+      </div>
+
+      {{#is "index"}}
+      <!-- Sidebar -->
+      {{> sidebar }}
+      {{/is}}
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="{{asset "built/jquery.min.js"}}"></script>
+    <script src="{{asset "built/browser.min.js"}}"></script>
+    <script src="{{asset "built/breakpoints.min.js"}}"></script>
+    <script src="{{asset "built/util.js"}}"></script>
+    <script src="{{asset "built/main.js"}}"></script>
+    {{ghost_foot}}
+  </body>
+</html>

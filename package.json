@@ -4,7 +4,8 @@
     "description": "A blog-style template, Future Imperfect features a clean, expansive layout, a toggleable search box, and a whole lot of flexbox action, ported to the ghost template system",
     "main": "assets/js/main.js",
     "engines": {
-        "ghost-api": "v3"
+        "ghost": ">=4.0.0",
+        "ghost-api": "v4"
     },
     "scripts": {
         "start": "(trap 'kill 0' SIGINT; sass --watch assets/sass/main.scss:assets/css/main.css assets/sass/fontawesome.scss:assets/css/fontawesome.css & /usr/bin/python -m SimpleHTTPServer)",
@@ -12,7 +13,7 @@
         "css1": "sass assets/sass/main.scss assets/css/main.css",
         "css2": "sass assets/sass/fontawesome.scss assets/css/fontawesome.css",
         "html": "for file in *-body.html; do awk -v body_file=$file -f build.awk template.html > ${file%-body.html}.html ; done",
-        "test": "gscan ."
+        "test": "gscan . --verbose"
     },
     "repository": {
         "type": "git",
@@ -21,6 +22,8 @@
     "keywords": [
         "ghost",
         "template",
+        "theme",
+        "ghost-theme",
         "blog"
     ],
     "author": {

@@ -329,7 +329,6 @@ body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 }
 
 #wrapper {
-  background-image: url("/assets/images/bg.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

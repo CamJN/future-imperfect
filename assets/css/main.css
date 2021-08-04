@@ -328,6 +328,14 @@ body.is-preload *, body.is-preload *:before, body.is-preload *:after {
   transition: none !important;
 }
 
+#wrapper {
+  background-image: url("../../images/pic01.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 /* Type */
 body, input, select, textarea {
   color: #646464;

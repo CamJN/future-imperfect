@@ -93,7 +93,8 @@
 			});
 
     $window.scroll( function(){
-        $main.css("margin-top", 460 - $window.scrollTop());
+        $main.css("margin-top", Math.max(0, 460 - $window.scrollTop()));
+        $sidebar.css("margin-top", Math.min(460, $window.scrollTop()));
     });
 
 })(jQuery);

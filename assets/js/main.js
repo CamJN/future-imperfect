@@ -92,4 +92,8 @@
 				$intro.prependTo($sidebar);
 			});
 
+    $window.scroll( function(){
+        $main.css("margin-top", 460 - $window.scrollTop());
+    });
+
 })(jQuery);
